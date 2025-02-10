@@ -1,0 +1,27 @@
+.navbar {
+    background-color: rgb(187, 224, 242) ;/* Light blue background */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-radius: 10px; */
+    margin: 0;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo-img {
+    width: 90px; /* Adjust the logo size */
+    height: auto;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+.navbar ul li{
+    display: inline;
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+    font-size: 1.2rem;
+}
+  
