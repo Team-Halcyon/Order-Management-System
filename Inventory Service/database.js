@@ -35,12 +35,5 @@ db.serialize(() => {
         stmt.finalize();
 });
 
-db.close((err) => {
-    if (err) {
-        console.error('Error closing the database:', err.message);
-    } else {
-        console.log('Database connection closed.');
-    }
-});
 
 module.exports = db;
