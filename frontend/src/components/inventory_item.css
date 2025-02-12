@@ -1,0 +1,111 @@
+.food-display {
+  margin-top: 30px;
+}
+
+.shop {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.inventory-item-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.inventory-item {
+  background: white;
+  margin: auto;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.inventory-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.inventory-item-image {
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.inventory-item-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.inventory-item-name {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.inventory-item-price {
+  color: rgb(64, 183, 242);
+  font-size: 22px;
+  font-weight: 500;
+  margin: 10px 0px;
+}
+
+.inventory-item-image-container {
+  position: relative;
+}
+
+.inventory-item-image-container .add {
+  width: 35px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.inventory-item-image-container .add:hover {
+  transform: scale(1.1);
+}
+
+.inventory-item-image-container .inventory-item-counter {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  gap: 10px;
+  align-items: center;
+  border-radius: 50px;
+  background-color: rgb(187, 224, 242);
+  padding: 6px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.inventory-item-image-container .inventory-item-counter img {
+  width: 30px;
+  transition: transform 0.2s;
+}
+
+.inventory-item-image-container .inventory-item-counter img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .inventory-item-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .inventory-item-info {
+    padding: 15px;
+  }
+
+  .inventory-item-price {
+    font-size: 18px;
+  }
+}
